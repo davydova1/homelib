@@ -6,11 +6,13 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 13:26:05 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 13:26:05 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:49:20 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr_fd(int nb, int fd)
+#include "libft.h"
+
+void				ft_putnbr_fd(int nb, int fd)
 {
 	unsigned int	nbr;
 

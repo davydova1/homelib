@@ -6,15 +6,17 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:11:07 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/02 18:11:07 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:49:09 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-void *memmove(void *dest, const void *source, size_t count)
+void
+	*memmove(void *dest, const void *source, size_t count)
 {
-	unsigned char *dst;
-	unsigned char *src;
+	unsigned char	*dst;
+	unsigned char	*src;
 
 	dst = (unsigned char*)dest;
 	src = (unsigned char*)source;
@@ -22,18 +24,17 @@ void *memmove(void *dest, const void *source, size_t count)
 	{
 		while (count--)
 		{
-			*dst++=*src++;
+			*dst++ = *src++;
 		}
-		
 	}
-	else 
+	else
 	{
-		dst+= count;
-		src+= count;
+		dst += count;
+		src += count;
 		while (count--)
 		{
-			*--dst=*--src;
+			*--dst = *--src;
 		}
 	}
-	return dest;
+	return (dest);
 }

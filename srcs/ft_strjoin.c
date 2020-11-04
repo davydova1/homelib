@@ -6,61 +6,30 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:25:52 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 16:25:52 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:49:38 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-size_t ft_strlen (const char *str)
-{
-	size_t size;
-	unsigned char *str1;
-	
-	size = 0;
-	str1 = (unsigned char *)str;
-	
-	while (*str1++)
-		size++;
+#include "libft.h"
 
-	return size;
-}
-
-char *ft_strjoin(char const *s1, char const *s2)
+char				*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int i;
-	size_t size_s1;
-	size_t size_s2;
-	char *dst;
-	
+	unsigned int	i;
+	size_t			size_s1;
+	size_t			size_s2;
+	char			*dst;
+
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
-	if (!(dst = (char*)malloc(sizeof(*s1)*(size_s1+size_s2+1))))
+	if (!(dst = (char*)malloc(sizeof(*s1) * (size_s1 + size_s2 + 1))))
 		return (NULL);
 	while (*s1)
-		{
-			dst[i++] = *s1++;
-			//i++;
-		}
+		dst[i++] = *s1++;
 	while (*s2)
-		{
-			dst[i++] = *s2++;
-			//i++;
-		}
+		dst[i++] = *s2++;
 	dst[i] = '\0';
 	return (dst);
-}
-int main(void) {
-	const char src1[6] = "hello";
-	const char src2[6] = "ppppp";
-	char *dst;
-	
-	dst = ft_strjoin(src1,src2);
-	int i = 0;
-	while (dst[i])
-		printf("%c", dst[i++]);
-	return 0;
 }

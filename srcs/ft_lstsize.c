@@ -6,11 +6,13 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:13:18 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 16:13:18 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:48:53 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_lstsize(t_list *lst)
+#include "libft.h"
+
+int			ft_lstsize(t_list *lst)
 {
 	size_t	i;
 

@@ -6,16 +6,15 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 01:55:20 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 01:55:20 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:48:26 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int		len(long nb)
+static int		len(long nb)
 {
-	int		len;
+	int			len;
 
 	len = 0;
 	if (nb < 0)
@@ -31,11 +30,11 @@ int		len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int nb)
+char			*ft_itoa(int nb)
 {
-	char *str;
-	long	n;
-	int		i;
+	char		*str;
+	long		n;
+	int			i;
 
 	n = nb;
 	i = len(n);
@@ -54,9 +53,8 @@ char	*ft_itoa(int nb)
 	}
 	while (n > 0)
 	{
-		str[i] = 48 + (n % 10);
+		str[i--] = 48 + (n % 10);
 		n = n / 10;
-		i--;
 	}
 	return (str);
 }

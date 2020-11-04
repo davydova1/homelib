@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 16:18:49 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 22:48:43 by llemmiwi         ###   ########.fr       */
+/*   Created: 2020/10/30 20:26:17 by llemmiwi          #+#    #+#             */
+/*   Updated: 2020/11/04 22:50:10 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstiter(t_list *lst, void (*f)(void*))
+int		ft_toupper(int ch)
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+		if (ch >= 'a' && ch <= 'z')
+			ch = ch - 'a' + 'A';
+	return (ch);
 }

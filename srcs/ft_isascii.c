@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 16:18:49 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 22:48:43 by llemmiwi         ###   ########.fr       */
+/*   Created: 2020/10/30 20:07:10 by llemmiwi          #+#    #+#             */
+/*   Updated: 2020/11/04 22:50:34 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstiter(t_list *lst, void (*f)(void*))
+int     ft_isascii(int c)
 {
-	if (!f)
-		return ;
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+    if (c >= 0 && c <= 127)
+        return 1;
+    return 0;
 }

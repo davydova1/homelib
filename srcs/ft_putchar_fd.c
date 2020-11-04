@@ -6,11 +6,11 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 13:17:16 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 13:17:16 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:49:15 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

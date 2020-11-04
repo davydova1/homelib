@@ -6,14 +6,16 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 16:19:48 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/04 16:19:48 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:48:48 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
+#include "libft.h"
+
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *))
 {
-	t_list	*first;
-	t_list	*new;
+	t_list		*first;
+	t_list		*new;
 
 	if (!f || !del)
 		return (NULL);

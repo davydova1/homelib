@@ -6,16 +6,17 @@
 /*   By: llemmiwi <llemmiwi@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:10:36 by llemmiwi          #+#    #+#             */
-/*   Updated: 2020/11/02 18:10:36 by llemmiwi         ###   ########.fr       */
+/*   Updated: 2020/11/04 22:57:02 by llemmiwi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
 
-void *ft_calloc(size_t num, size_t size)
+void		*ft_calloc(size_t num, size_t size)
 {
-	char *str;
-	
-	str = malloc(num*size);
+	char	*str;
+
+	str = malloc(num * size);
 	if (!(str))
 		return (NULL);
 	while (*str++)
